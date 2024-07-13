@@ -13,9 +13,6 @@ import streamlit as st
 from io import BytesIO
 
 
-# link = "https://www.iesdouyin.com/share/video/7387396213290568987/?region=CN&mid=7387396161667156786&u_code=3baf64mc02m8&did=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&with_sec_did=1&titleType=title&share_sign=vJJm8vi8SERkNRlu7YKpgcX5Wcj3Lh46GnQVoh2ljfk-&share_version=290200&ts=1720060647&from_aid=1128&from_ssr=1"
-# link = '4.12 T@Y.ZM PxS:/ 10/10 # 记录猫咪日常 # 悠闲的摆烂小猫 😂猫咪奇怪姿势➕1  https://v.douyin.com/i69buPGQ/ 复制此链接，打开Dou音搜索，直接观看视频！'
-
 cookies = {
     'passport_assist_user': 'CkF5fvCn7vxEe0EEB3rt68o0B4jeL4G5nFtEn6snrq7q3fONIuLo-Ayrk33E6JByQuiLO3_IlaQqvi7MIfC6quCszRpKCjxJmTqHh5D5oRi7grBSKuRTofl6Tmc3z9Xs3L_FZVu461oMuQVZwMlbHfwgeLQFbtXTXaTDDNw7X-Q6K00QkOvKDRiJr9ZUIAEiAQNRMi6X',
     'LOGIN_STATUS': '1',
