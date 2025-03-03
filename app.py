@@ -60,14 +60,19 @@ def url_parse(text: str) -> object:
     try:
         c = "[a-zA-z]+://[^\s]*"
         url = re.findall(c, text)[0]
+        logger.info(f"get url {url}")
         response = requests.get(url=url, cookies=cookies, headers=headers)
+        response = response.text.replace("\n", "")
         rc = '"play_addr":.*?video_id=(.*?)&'
-        video_name = re.findall('<title .*?>(.*?)</title>', response.text)[0]
-        video_id = re.findall(rc, response.text, re.S)[0]
+        video_name = re.findall('<title .*?>(.*?)</title>', response)[0]
+        logger.info(f"name {video_name}")
+        video_id = re.findall(rc, response, re.S)[0]
+        logger.info(f"is {video_id}")
         video_url = "https://www.iesdouyin.com/aweme/v1/play/?video_id=" + video_id
         st.success("解析成功，即将开始获取！", icon="✅")
         return video_url, video_name
     except Exception as e:
+        logger.error(e)
         st.error(f"解析失败，链接{text[:10]}...异常", icon="🚨")
 
 
